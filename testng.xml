@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.oluwatobitesting.TestUtils.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Landing Page Test">
+        <classes>
+            <class name="org.oluwatobitesting.LandingPageIT">
+                <methods>
+                    <include name="logInButtonTest"/>
+                    <include name="getStartedButtonTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Login Page Test">
+        <classes>
+            <class name="org.oluwatobitesting.LoginPageIT">
+                <methods>
+                    <include name="emailAddressFieldTest"/>
+                    <include name="passwordFieldTest"/>
+                    <include name="passwordToggleTest"/>
+                    <include name="loginWithoutEmailAddress"/>
+                    <include name="loginWithInvalidEmailAddress"/>
+                    <include name="loginWithoutPassword"/>
+                    <include name="loginWithNonExistentEmailAddress"/>
+                    <include name="loginWithInvalidPassword"/>
+                    <include name="loginWithValidCredentials"/>
+                    <include name="navigateBackToLandingPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Get Started Page Test">
+        <classes>
+            <class name="org.oluwatobitesting.GetStartedPageIT">
+                <methods>
+                    <include name="signUpAsAffiliateOption"/>
+                    <include name="signUpAsStaffOption"/>
+                    <include name="signUpWithoutSelectingOption"/>
+                    <include name="signUpWithSelectingBothOptions"/>
+                    <include name="navigateBackToLandingPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Sign Up As An Affiliate Test">
+        <classes>
+            <class name="org.oluwatobitesting.SignUpAsAffiliateIT">
+                <methods>
+                    <include name="pageNumberVerification"/>
+                    <include name="signUpWithoutAffiliate"/>
+                    <include name="selectAffiliateOption"/>
+                    <include name="signUpWithoutFirstName"/>
+                    <include name="enterFirstName"/>
+                    <include name="signUpWithoutLastName"/>
+                    <include name="enterLastName"/>
+                    <include name="signUpWithoutEmailAddress"/>
+                    <include name="enterInvalidEmailAddress"/>
+                    <include name="enterValidEmailAddress"/>
+                    <include name="signUpWithoutPassword"/>
+                    <include name="enterInvalidPassword"/>
+                    <include name="enterValidPassword"/>
+                    <include name="revealPassword"/>
+                    <include name="signUpWithoutRepeatPassword"/>
+                    <include name="enterInvalidRepeatPassword"/>
+                    <include name="notMatchRepeatPassword"/>
+                    <include name="enterValidRepeatPassword"/>
+                    <include name="revealRepeatPassword"/>
+                    <include name="signUpWithExistingEmailAddress"/>
+                    <include name="signUpWithValidDetails"/>
+                    <include name="verifyAgentOnboardingEndToEnd"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Sign Up As A Staff Test">
+        <classes>
+            <class name="org.oluwatobitesting.SignUpAsStaffIT">
+                <methods>
+                    <include name="verifyWithoutStaffID"/>
+                    <include name="enterStaffID"/>
+                    <include name="staffIDCharacterLimit"/>
+                    <include name="verifyNonExistentStaffID"/>
+                    <include name="navigateBackToGetStartedPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

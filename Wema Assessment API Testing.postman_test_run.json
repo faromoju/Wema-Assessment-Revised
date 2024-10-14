@@ -1,0 +1,551 @@
+{
+	"id": "3f7800e5-6723-4794-8a61-ceab1def285c",
+	"name": "Wema Assessment API Testing",
+	"timestamp": "2024-09-09T19:25:44.349Z",
+	"collection_id": "19572898-e701c3a9-2efc-49b0-95e8-52e9d0d08f74",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 25,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-09-09T19:16:27.027Z",
+	"totalFail": 9,
+	"results": [
+		{
+			"id": "05815316-5645-4876-bfde-486c162f70a8",
+			"name": "Create Employer",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 995,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status Code is 200": true,
+				"Response Content-Type is JSON": true,
+				"Status in the Response Body is Success": true,
+				"The entered Employer id 2 is in the Response Body": true,
+				"Response time is less than 1 second": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Content-Type is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status in the Response Body is Success": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The entered Employer id 2 is in the Response Body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1 second": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				995
+			],
+			"allTests": [
+				{
+					"Status Code is 200": true,
+					"Response Content-Type is JSON": true,
+					"Status in the Response Body is Success": true,
+					"The entered Employer id 2 is in the Response Body": true,
+					"Response time is less than 1 second": true
+				}
+			]
+		},
+		{
+			"id": "d31026a1-8793-4cff-8070-14e4d98c6c76",
+			"name": "Create Employer Rate Limiting",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 365,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Status Code is 429": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 429": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				365
+			],
+			"allTests": [
+				{
+					"Status Code is 429": true
+				}
+			]
+		},
+		{
+			"id": "2bb7cb53-24e2-4140-8be8-99d9b5c276d1",
+			"name": "Create Employer without Status",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 398,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				398
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		},
+		{
+			"id": "3ffabd36-6622-4f58-a88a-afce152bb8fe",
+			"name": "Create Employer without Data",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 379,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				379
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		},
+		{
+			"id": "6bf8a361-4ae9-4cbb-aa8f-6e152ee8f830",
+			"name": "Create Employer with Invalid Salary",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 353,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				353
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		},
+		{
+			"id": "9b998305-a921-4727-ba41-1f3407ce8957",
+			"name": "Create Employer with Invalid Age",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 421,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				421
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		},
+		{
+			"id": "4f8ed6d6-03a4-4e27-ac18-85f047e4779e",
+			"name": "Create Employer with Invalid ID",
+			"url": "https://dummy.restapiexample.com/api/v1/create",
+			"time": 464,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				464
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		},
+		{
+			"id": "68de2922-5ede-4df9-9c96-dd8a22e3a93c",
+			"name": "Get All Employees",
+			"url": "https://dummy.restapiexample.com/api/v1/employees",
+			"time": 504,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 200": true,
+				"Response time is less than 1 second": false,
+				"Response Content-Type is JSON": true,
+				"Status in the Response Body is Success": true,
+				"id is in the Response Body": true
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1 second": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response Content-Type is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status in the Response Body is Success": {
+					"pass": 1,
+					"fail": 0
+				},
+				"id is in the Response Body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				504
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 200": true,
+					"Response time is less than 1 second": false,
+					"Response Content-Type is JSON": true,
+					"Status in the Response Body is Success": true,
+					"id is in the Response Body": true
+				}
+			]
+		},
+		{
+			"id": "6f91cda6-dcad-452c-b60a-af0e12ea6875",
+			"name": "Get All Employees Rate Limiting",
+			"url": "https://dummy.restapiexample.com/api/v1/employees",
+			"time": 943,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Status Code is 429": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 429": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				943
+			],
+			"allTests": [
+				{
+					"Status Code is 429": true
+				}
+			]
+		},
+		{
+			"id": "79d59f17-2baf-448b-8094-08ff2ad4a392",
+			"name": "Get Employee",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/5",
+			"time": 341,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 200": true,
+				"Response time is less than 1 second": false,
+				"Response Content-Type is JSON": true,
+				"Status in the Response Body is Success": true,
+				"The entered Employee id 5 is in the Response Body": true
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1 second": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response Content-Type is JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status in the Response Body is Success": {
+					"pass": 1,
+					"fail": 0
+				},
+				"The entered Employee id 5 is in the Response Body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				341
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 200": true,
+					"Response time is less than 1 second": false,
+					"Response Content-Type is JSON": true,
+					"Status in the Response Body is Success": true,
+					"The entered Employee id 5 is in the Response Body": true
+				}
+			]
+		},
+		{
+			"id": "cc9fcc6f-bd38-4006-a432-80a7ddcd3754",
+			"name": "Get Employee Rate Limiting",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/5",
+			"time": 863,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Status Code is 429": true
+			},
+			"testPassFailCounts": {
+				"Status Code is 429": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				863
+			],
+			"allTests": [
+				{
+					"Status Code is 429": true
+				}
+			]
+		},
+		{
+			"id": "a836487d-441c-45df-a647-9d5e9831d85e",
+			"name": "Get Employee with Non-Existent ID",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/999999",
+			"time": 626,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 404": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 404": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				626
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 404": false
+				}
+			]
+		},
+		{
+			"id": "e607ce55-8ffd-474e-be6b-8c261cee9dea",
+			"name": "Get Employee with Invalid ID",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/Test",
+			"time": 2023,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Rate-Limiting in Progress. Wait for request to be resent": true,
+				"Status Code is 400": false
+			},
+			"testPassFailCounts": {
+				"Rate-Limiting in Progress. Wait for request to be resent": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status Code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2023
+			],
+			"allTests": [
+				{
+					"Rate-Limiting in Progress. Wait for request to be resent": true,
+					"Status Code is 400": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8675,
+	"collection": {
+		"requests": [
+			{
+				"id": "05815316-5645-4876-bfde-486c162f70a8",
+				"method": "POST"
+			},
+			{
+				"id": "d31026a1-8793-4cff-8070-14e4d98c6c76",
+				"method": "POST"
+			},
+			{
+				"id": "2bb7cb53-24e2-4140-8be8-99d9b5c276d1",
+				"method": "POST"
+			},
+			{
+				"id": "3ffabd36-6622-4f58-a88a-afce152bb8fe",
+				"method": "POST"
+			},
+			{
+				"id": "6bf8a361-4ae9-4cbb-aa8f-6e152ee8f830",
+				"method": "POST"
+			},
+			{
+				"id": "9b998305-a921-4727-ba41-1f3407ce8957",
+				"method": "POST"
+			},
+			{
+				"id": "4f8ed6d6-03a4-4e27-ac18-85f047e4779e",
+				"method": "POST"
+			},
+			{
+				"id": "68de2922-5ede-4df9-9c96-dd8a22e3a93c",
+				"method": "GET"
+			},
+			{
+				"id": "6f91cda6-dcad-452c-b60a-af0e12ea6875",
+				"method": "GET"
+			},
+			{
+				"id": "79d59f17-2baf-448b-8094-08ff2ad4a392",
+				"method": "GET"
+			},
+			{
+				"id": "cc9fcc6f-bd38-4006-a432-80a7ddcd3754",
+				"method": "GET"
+			},
+			{
+				"id": "a836487d-441c-45df-a647-9d5e9831d85e",
+				"method": "GET"
+			},
+			{
+				"id": "e607ce55-8ffd-474e-be6b-8c261cee9dea",
+				"method": "GET"
+			}
+		]
+	}
+}
