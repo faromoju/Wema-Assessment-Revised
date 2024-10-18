@@ -5,8 +5,8 @@ pipeline {
         stage('Test') {
             steps {
                 //Get Automation Code from Github
-                echo 'Pull Automation Script from Remote Repository'
-                git 'https://github.com/faromoju/Wema-Assessment-Revised'
+                //echo 'Pull Automation Script from Remote Repository'
+                //git 'https://github.com/faromoju/Wema-Assessment-Revised'
 
                 //Start Test Device
                 echo 'Boot Test Device'
