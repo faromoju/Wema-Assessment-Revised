@@ -9,8 +9,8 @@ pipeline {
                 //git 'https://github.com/faromoju/Wema-Assessment-Revised'
 
                 //Start Test Device
-                echo 'Boot Test Device'
-                sh 'emulator @"%DeviceName%"'
+                //echo 'Boot Test Device'
+                //sh 'emulator @"%DeviceName%"'
 
                 //Run Automation Code
                 echo 'Run Automation Script'
