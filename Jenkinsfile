@@ -14,7 +14,7 @@ pipeline {
 
                 //Run Automation Code
                 echo 'Run Automation Script'
-                sh 'mvn test -PFullFunctionalTest -Dport="%Port%" -DandroidDeviceName="%DeviceName%" -DandroidDeviceUdid="%DeviceId%"'
+                bat 'mvn test -PFullFunctionalTest -Dport="%Port%" -DandroidDeviceName="%DeviceName%" -DandroidDeviceUdid="%DeviceId%"'
             }
         }
     }
