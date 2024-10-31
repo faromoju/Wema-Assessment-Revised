@@ -14,8 +14,8 @@ pipeline {
 
 
                 //Start Emulator
-                echo 'Start Device Emulator'
-                bat 'emulator @%DeviceName%'
+                //echo 'Start Device Emulator'
+                //bat 'emulator @%DeviceName%'
 
                 //Run Automation Code
                 echo 'Run Automation Script'
